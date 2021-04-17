@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MovieStarPage  from './pages/MovieStar/MovieStar'
+import ActorsPage from  '../src/pages/Actors/ActorsPage';
 
 function App() {
   return (
     <div>
-      <MovieStarPage/>
+      <ActorsPage/>  
     </div>
   );
 }

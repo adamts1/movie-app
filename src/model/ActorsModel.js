@@ -1,8 +1,10 @@
 class ActorsModel {
-    constructor(name, year, pic) {
-        this.name = name;
+    constructor(firstName, lastName, year, pic, imdb ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.year  = year;
         this.pic = pic;
+        this.imdb = imdb;
     }
 
     ActorAge(){

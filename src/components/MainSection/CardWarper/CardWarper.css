@@ -1,0 +1,13 @@
+.CardWarper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: black */
+}
+
+.NoData{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px ;
+}

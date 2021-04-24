@@ -1,6 +1,6 @@
 import { DropdownButton, Dropdown, Navbar, Form, FormControl } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
-import React, { Component } from 'react';
+import React from 'react';
 import './ActorNavbar.css'
 
 
@@ -16,6 +16,8 @@ const ActorNavbar=({onChange, onSelect, sortBy})=>{
             width: "800px"
         }
     }
+
+ 
 
     return(<div>
             <Navbar bg="light" expand="lg">

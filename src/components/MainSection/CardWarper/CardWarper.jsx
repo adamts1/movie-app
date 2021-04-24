@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../MainSection/Card/Card';
 import './CardWarper.css';
 
+
 function CardWarper({actors, inputVal, sortBy}) {
 
     const data =  Object.keys(actors).map((key, index)=>{            
@@ -12,7 +13,6 @@ function CardWarper({actors, inputVal, sortBy}) {
       const filtererdActors = data.filter(actor => 
         actor.firstName.toLowerCase().includes(inputVal.toLowerCase()) || 
         actor.lastName.toLowerCase().includes(inputVal.toLowerCase()));
-
 
         // Sort
         filtererdActors.sort((actor1, actor2) => {
@@ -25,21 +25,24 @@ function CardWarper({actors, inputVal, sortBy}) {
             }
           });
     
-    const actorsCard = filtererdActors.map(actor => <Card {...actor} birthDate={actor.ActorAge()} />)    
+    const actorsCard = filtererdActors.map((actor, key) => <Card key={key} {...actor} birthDate={actor.ActorAge()} />)    
+    
 
-      if(actorsCard.length != 0 ) {
-        return (
-        <div className="CardWarper" >
-            {actorsCard}           
+    if(actorsCard.length != 0 ) {
+      return (
+      <div className="CardWarper" >
+          {actorsCard}           
+      </div>
+      )
+    }else{
+      return (
+        <div className="NoData" >
+           <h1>No Data</h1>          
         </div>
         )
-      }else{
-        return (
-          <div className="NoData" >
-             <h1>No Data</h1>          
-          </div>
-          )
-      } 
+    } 
+
+ 
 }
 
 export default CardWarper;
